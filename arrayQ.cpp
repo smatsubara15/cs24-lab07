@@ -21,11 +21,10 @@ void Queue::enqueue(int n) {
 int Queue::dequeue() {
     if (isEmpty())
         throw EmptyQueue();
+    int value=data[front];
     front=(front+1)%CAPACITY;
     size--;
-
-    // COMPLETE THIS IMPLEMENTATION
-    return data[front]; // AND REPLACE THIS RETURN STATEMENT
+    return value; // AND REPLACE THIS RETURN STATEMENT
 }
 
 void Queue::clear() {
